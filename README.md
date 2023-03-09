@@ -29,8 +29,7 @@ MYSQL_DATABASE=<your_mysql_database_name_here>
 GOOGLE_CLIENT_ID=<your_google_client_id_here>
 GOOGLE_CLIENT_SECRET=<your_google_client_secret_here>
 ```
-7. Save the .env file
-8. 
+7. Save the .env file 
 ## run
 ```bash
 python3 app.py or flask run --cert=adhoc
