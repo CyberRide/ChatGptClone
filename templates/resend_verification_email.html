@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+{% block name%} Verify Emaill {% endblock %}
+{% block content %}
+<style id="custom-styles-container">
+    body {
+        background: #ffffff;
+        font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+    }
+
+    .cf59de101 {
+        background: #ffffff;
+    }
+
+    .ver {
+        margin-top: 56px;
+        font-size: 32px;
+        font-weight: 700;
+
+    }
+    #all{
+        margin-bottom: 200px;
+        margin-top: 0px;
+      
+        
+    }
+
+    .email-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 70px;
+    }
+
+    .email-message__step {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .email-message__email {
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    .c5e785f29.c444d2b17 {
+        background: #D00E17;
+    }
+
+    .c5e785f29.c927264cb {
+        background: #0A8852;
+    }
+
+    .c68270204 {
+        background-color: #10a37f;
+        color: #ffffff;
+    }
+
+    .c68270204 a,
+    .c68270204 a:visited {
+        color: #ffffff;
+    }
+
+    .cda3c8c7e {
+        background-color: #0A8852;
+    }
+
+    .c0683acb7 {
+        background-color: #D00E17;
+    }
+
+    @supports (mask-image: url('/static/img/branding-generic/copy-icon.svg')) {
+        @supports not (-ms-ime-align: auto) {
+            .c201a4335.c54b26e14::before {
+                background-color: #D00E17;
+            }
+        }
+    }
+
+    .input.cd118ec92 {
+        border-color: #D00E17;
+    }
+
+    .error-cloud {
+        background-color: #D00E17;
+    }
+
+    .error-fatal {
+        background-color: #D00E17;
+    }
+
+    .error-local {
+        background-color: #D00E17;
+    }
+
+    #alert-trigger {
+        background-color: #D00E17;
+    }
+</style>
+<style>
+    /* By default, hide features for javascript-disabled browsing */
+    /* We use !important to override any css with higher specificity */
+    /* It is also overriden by the styles in <noscript> in the header file */
+    .no-js {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+</style>
+<noscript>
+    <style>
+        /* We use !important to override the default for js enabled */
+        /* If the display should be other than block, it should be defined specifically here */
+        .js-required {
+            display: none !important;
+        }
+
+        .no-js {
+            clip: auto;
+            clip-path: none;
+            height: auto;
+            overflow: auto;
+            position: static;
+            white-space: normal;
+            width: var(--prompt-width);
+        }
+    </style>
+</noscript>
+
+<style>
+    @font-face {
+        font-family: "ColfaxAI";
+        src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
+            url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "ColfaxAI";
+        src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegularItalic.woff2) format("woff2"),
+            url(https://cdn.openai.com/API/fonts/ColfaxAIRegularItalic.woff) format("woff");
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "ColfaxAI";
+        src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+            url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "ColfaxAI";
+        src: url(https://cdn.openai.com/API/fonts/ColfaxAIBoldItalic.woff2) format("woff2"),
+            url(https://cdn.openai.com/API/fonts/ColfaxAIBoldItalic.woff) format("woff");
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    :root {
+        --font-family: "ColfaxAI", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+        --primary-color: #10a37f;
+        --primary-color-no-override: #10a37f;
+        --action-primary-color: #10a37f;
+        --link-color: #10a37f;
+        --input-box-shadow-depth: 1px;
+        --page-background-color: #ffffff;
+    }
+
+    body {
+        font-family: var(--font-family);
+        background-color: var(--page-background-color);
+    }
+
+    /* Show custom openai logo */
+    .oai-header {
+        position: absolute;
+        top: 32px;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .oai-header svg {
+        width: 32px;
+        height: 32px;
+        fill: #202123;
+    }
+
+    main header>img:first-of-type {
+        display: none;
+    }
+
+    main>section,
+    main>section>div:first-child {
+        box-shadow: none;
+    }
+
+    main header>h1 {
+        font-weight: bold !important;
+        font-size: 32px !important;
+    }
+
+    main a {
+        font-weight: normal !important;
+    }
+
+    .ulp-alternate-action {
+        text-align: center;
+    }
+
+    button[type="submit"] {
+        font-family: var(--font-family);
+    }
+
+    main header>h1 {
+        margin-bottom: 0 !important;
+    }
+
+    form[data-provider] {
+        margin-bottom: var(--spacing-1);
+    }
+</style>
+</head>
+
+<body class="_widget-auto-layout">
+    <header class="oai-header">
+        <svg viewBox="140 140 520 520" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="m617.24 354a126.36 126.36 0 0 0 -10.86-103.79 127.8 127.8 0 0 0 -137.65-61.32 126.36 126.36 0 0 0 -95.31-42.49 127.81 127.81 0 0 0 -121.92 88.49 126.4 126.4 0 0 0 -84.5 61.3 127.82 127.82 0 0 0 15.72 149.86 126.36 126.36 0 0 0 10.86 103.79 127.81 127.81 0 0 0 137.65 61.32 126.36 126.36 0 0 0 95.31 42.49 127.81 127.81 0 0 0 121.96-88.54 126.4 126.4 0 0 0 84.5-61.3 127.82 127.82 0 0 0 -15.76-149.81zm-190.66 266.49a94.79 94.79 0 0 1 -60.85-22c.77-.42 2.12-1.16 3-1.7l101-58.34a16.42 16.42 0 0 0 8.3-14.37v-142.39l42.69 24.65a1.52 1.52 0 0 1 .83 1.17v117.92a95.18 95.18 0 0 1 -94.97 95.06zm-204.24-87.23a94.74 94.74 0 0 1 -11.34-63.7c.75.45 2.06 1.25 3 1.79l101 58.34a16.44 16.44 0 0 0 16.59 0l123.31-71.2v49.3a1.53 1.53 0 0 1 -.61 1.31l-102.1 58.95a95.16 95.16 0 0 1 -129.85-34.79zm-26.57-220.49a94.71 94.71 0 0 1 49.48-41.68c0 .87-.05 2.41-.05 3.48v116.68a16.41 16.41 0 0 0 8.29 14.36l123.31 71.19-42.69 24.65a1.53 1.53 0 0 1 -1.44.13l-102.11-59a95.16 95.16 0 0 1 -34.79-129.81zm350.74 81.62-123.31-71.2 42.69-24.64a1.53 1.53 0 0 1 1.44-.13l102.11 58.95a95.08 95.08 0 0 1 -14.69 171.55c0-.88 0-2.42 0-3.49v-116.68a16.4 16.4 0 0 0 -8.24-14.36zm42.49-63.95c-.75-.46-2.06-1.25-3-1.79l-101-58.34a16.46 16.46 0 0 0 -16.59 0l-123.31 71.2v-49.3a1.53 1.53 0 0 1 .61-1.31l102.1-58.9a95.07 95.07 0 0 1 141.19 98.44zm-267.11 87.87-42.7-24.65a1.52 1.52 0 0 1 -.83-1.17v-117.92a95.07 95.07 0 0 1 155.9-73c-.77.42-2.11 1.16-3 1.7l-101 58.34a16.41 16.41 0 0 0 -8.3 14.36zm23.19-50 54.92-31.72 54.92 31.7v63.42l-54.92 31.7-54.92-31.7z" />
+        </svg>
+    </header>
+    <main class="_widget ca9f6826a">
+        <section class="c73913744 _prompt-box-outer cc050d218">
+            <div class="c5a405818 cb524b9ea">
+                <div class="c83d5a40b">
+                    <header class="c11bcbe11 c0cd39f53">
+                        <div title="OpenAI" id="custom-prompt-logo"
+                            style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important">
+                        </div>
+
+                        <img class="ce1d42542 c995fce4e" id="prompt-logo-center"
+                            src="https://openai.com/content/images/2019/05/openai-avatar.png" alt="OpenAI" />
+
+                        
+                            <h1 class="ver">Verify your email</h1>
+                            <div class="email-message">
+                                <p class="email-message__step"> We sent an email to</p>
+                                <p class="email-message__email">{{ email }}.</p>
+                                <p class="email-message__step">Click the link inside to get started.</p>
+                            </div>
+                    <div class="c1fad243c c3cf2d607" id="all">
+                        <div class=""  >
+                            <form method="post" data-provider="windowslive" class="cd88a1081 ccfb16d90 c210b6f9c"
+                                method="POST" action="https://mail.google.com/">
+                                <input type="hidden" name="state"
+                                    value="hKFo2SBVemFRVEdHRGZEdnp3WXFqa3ZVSWhybGg4aVBuaUJmdaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDB0LTdVenRUdl8tRDVHNGl1bUZlQ3hEMUc1bUVmbGhDo2NpZNkgVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEc" />
+
+                                <input type="hidden" name="connection" value="windowslive" />
+                                
+                                    <button type="submit" class="c906e3a88 c5f970fec cf78a669d" style="background-color: #ececf1;color: #353740; text-align: center;" data-provider="windowslive">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66" width="16px" height="16px">
+                                        <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"></path>
+                                        <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"></path>
+                                        <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"></path>
+                                        <path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"></path>
+                                        <path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"></path>
+                                      </svg>
+                                      <span style="margin-left: 8px;">Open Gmail</span>
+                                    </button>
+                                
+                                  
+                                  
+                                  
+                            </form>
+                        </div>
+                        <div class="ulp-alternate-action  _alternate-action ">
+                            <a class="cd32fc9ec c22a97a7d">Email Sent</a>
+                        </div>
+                    </div>
+      
+                    
+                </header>
+                
+            </div>
+            </div>
+        </section>
+    </main>
+    <script>
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    e.returnValue = '';
+});
+
+    </script>
+    {% endblock %}

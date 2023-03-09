@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="light" style="color-scheme: light;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>{% block name%}{% endblock %}</title>
+    <meta name="description" content="ChatGPT is an AI-powered language model developed by OpenAI, capable of generating human-like text based on context and past conversations.">
+    <meta name="next-head-count" content="4">  
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chat.openai.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chat.openai.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chat.openai.com/favicon-16x16.png">
+    <meta name="description" content="A conversational AI system that listens, learns, and challenges">
+    <meta property="og:title" content="ChatGPT">
+    <meta property="og:image" content="https://openai.com/content/images/2022/11/ChatGPT.jpg">
+    <meta property="og:description" content="A conversational AI system that listens, learns, and challenges">
+    <meta property="og:url" content="https://chat.openai.com">
+    <link rel="preload" href="/static/css/gpt.css" as="style" />
+    <link rel="stylesheet" href="/static/css/gpt.css" data-n-g="" /><noscript
+        data-n-css=""></noscript>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gpt2.css') }}">
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+<script>
+  function openNav() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('hidden');
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  };
+  
+  function closeNav() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.add('hidden');
+  }
+        </script>
+<script>
+  const emailInput = document.getElementById('email');
+  const emailLabel = emailInput.parentElement.querySelector('legend');
+
+  emailInput.addEventListener('focus', function () {
+    emailInput.setAttribute('placeholder', '');
+    emailLabel.style.display = 'block';
+    emailInput.style.color = '#10a37f';
+  });
+
+    emailInput.addEventListener('blur', function () {
+    emailInput.setAttribute('placeholder', 'Email address');
+    emailLabel.style.display = 'none';
+    emailInput.style.color = 'black';
+    });
+    passwordInput.addEventListener('blur', function () {
+    passwordInput.setAttribute('placeholder', 'Password');
+    passwordLabel.style.display = 'none';
+    passwordInput.style.color = 'black';
+  });
+</script>
+<script>
+const button = document.getElementById('theme-toggle');
+const buttonText = document.getElementById('theme-toggle-text');
+let theme = 'light';
+
+button.addEventListener('click', () => {
+  if (theme === 'light') {
+    theme = 'dark';
+    buttonText.textContent = 'Dark mode';
+    document.documentElement.classList.add('dark');
+    document.documentElement.style.colorScheme = 'dark';
+  } else {
+    theme = 'light';
+    buttonText.textContent = 'Light mode';
+    document.documentElement.classList.remove('dark');
+    document.documentElement.style.colorScheme = 'light';
+  }
+});
+</script>
+<script>
+const textarea = document.querySelector('textarea[name="user-input"]');
+textarea.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();
+    const form = document.querySelector('form');
+    form.submit();
+  }
+});
+
+
+</script>
+<script>
+  // Get the textarea and all the buttons by their IDs
+  const input = document.getElementById("input-text");
+  const button1 = document.getElementById("button1");
+  const button2 = document.getElementById("button2");
+  const button3 = document.getElementById("button3");
+
+  // Add event listeners to each button to update the textarea with the button's text when clicked
+  button1.addEventListener("click", () => {
+    input.value = 'Explain quantum computing in simple terms';
+  });
+
+  button2.addEventListener("click", () => {
+    input.value = 'Got any creative ideas for a 10 year old’s birthday';
+  });
+
+  button3.addEventListener("click", () => {
+    input.value = 'How do I make an HTTP request in Javascript?';
+  });
+</script>
+
+</html>

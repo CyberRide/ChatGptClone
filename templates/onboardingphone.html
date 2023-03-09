@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+{% block name%} Tell us about you {% endblock %}
+{% block content %}
+<style id="custom-styles-container">
+    body {
+      background: #ffffff;
+      font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+    }
+    .cf59de101 {
+      background: #ffffff;
+    }
+    .c5e785f29.c444d2b17 {
+      background: #D00E17;
+    }
+    .c5e785f29.c927264cb {
+      background: #0A8852;
+    }
+    .c68270204 {
+      background-color: #10a37f;
+      color: #ffffff;
+    }
+    .c68270204 a,
+    .c68270204 a:visited {
+      color: #ffffff;
+    }
+    .cda3c8c7e {
+      background-color: #0A8852;
+    }
+    .c0683acb7 {
+      background-color: #D00E17;
+    }
+    @supports (mask-image: url('/static/img/branding-generic/copy-icon.svg')) {
+      @supports not (-ms-ime-align: auto) {
+        .c201a4335.c54b26e14::before {
+          background-color: #D00E17;
+        }
+      }
+    }
+    .input.cd118ec92 {
+      border-color: #D00E17;
+    }
+    .error-cloud {
+      background-color: #D00E17;
+    }
+    .error-fatal {
+      background-color: #D00E17;
+    }
+    .error-local {
+      background-color: #D00E17;
+    }
+    #alert-trigger {
+      background-color: #D00E17;
+    }
+          
+        </style>
+        <style>
+          /* By default, hide features for javascript-disabled browsing */
+          /* We use !important to override any css with higher specificity */
+          /* It is also overriden by the styles in <noscript> in the header file */
+          .no-js {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+          }
+        </style>
+        <noscript>
+          <style>
+            /* We use !important to override the default for js enabled */
+            /* If the display should be other than block, it should be defined specifically here */
+            .js-required { display: none !important; }
+            .no-js {
+              clip: auto;
+              clip-path: none;
+              height: auto;
+              overflow: auto;
+              position: static;
+              white-space: normal;
+              width: var(--prompt-width);
+            }
+          </style>
+        </noscript>
+        
+    <style>
+        @font-face {
+            font-family: "ColfaxAI";
+            src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
+                url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        @font-face {
+            font-family: "ColfaxAI";
+            src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegularItalic.woff2) format("woff2"),
+                url(https://cdn.openai.com/API/fonts/ColfaxAIRegularItalic.woff) format("woff");
+            font-weight: normal;
+            font-style: italic;
+        }
+    
+        @font-face {
+            font-family: "ColfaxAI";
+            src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+                url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+            font-weight: bold;
+            font-style: normal;
+        }
+    
+        @font-face {
+            font-family: "ColfaxAI";
+            src: url(https://cdn.openai.com/API/fonts/ColfaxAIBoldItalic.woff2) format("woff2"),
+                url(https://cdn.openai.com/API/fonts/ColfaxAIBoldItalic.woff) format("woff");
+            font-weight: bold;
+            font-style: italic;
+        }
+    
+        :root {
+            --font-family: "ColfaxAI",-apple-system,BlinkMacSystemFont,Helvetica,sans-serif;
+            --primary-color: #10a37f;
+            --primary-color-no-override: #10a37f;
+            --action-primary-color: #10a37f;
+            --link-color: #10a37f;
+            --input-box-shadow-depth: 1px;
+            --page-background-color: #ffffff;
+        }
+    
+        body {
+            font-family: var(--font-family);
+            background-color: var(--page-background-color);
+        }
+    
+        /* Show custom openai logo */
+        .oai-header {
+            position: absolute;
+            top: 32px;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .oai-header svg {
+            width: 32px;
+            height: 32px;
+            fill: #202123;
+        }
+    
+        main header > img:first-of-type {
+            display: none;
+        }
+        main > section, main > section > div:first-child {
+            box-shadow: none;
+        }
+        main header > h1 {
+            font-weight: bold !important;
+            font-size: 32px !important;
+        }
+        main a {
+            font-weight: normal !important;
+        }
+        .ulp-alternate-action {
+            text-align: center;
+        }
+        button[type="submit"] {
+            font-family: var(--font-family);
+        }
+            main header > h1 {
+                margin-bottom: 0 !important;
+            }
+            form[data-provider] {
+                margin-bottom: var(--spacing-1);
+            }
+    </style>
+</head>
+<body class="_widget-auto-layout">
+    <header class="oai-header">
+        <svg viewBox="140 140 520 520" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="m617.24 354a126.36 126.36 0 0 0 -10.86-103.79 127.8 127.8 0 0 0 -137.65-61.32 126.36 126.36 0 0 0 -95.31-42.49 127.81 127.81 0 0 0 -121.92 88.49 126.4 126.4 0 0 0 -84.5 61.3 127.82 127.82 0 0 0 15.72 149.86 126.36 126.36 0 0 0 10.86 103.79 127.81 127.81 0 0 0 137.65 61.32 126.36 126.36 0 0 0 95.31 42.49 127.81 127.81 0 0 0 121.96-88.54 126.4 126.4 0 0 0 84.5-61.3 127.82 127.82 0 0 0 -15.76-149.81zm-190.66 266.49a94.79 94.79 0 0 1 -60.85-22c.77-.42 2.12-1.16 3-1.7l101-58.34a16.42 16.42 0 0 0 8.3-14.37v-142.39l42.69 24.65a1.52 1.52 0 0 1 .83 1.17v117.92a95.18 95.18 0 0 1 -94.97 95.06zm-204.24-87.23a94.74 94.74 0 0 1 -11.34-63.7c.75.45 2.06 1.25 3 1.79l101 58.34a16.44 16.44 0 0 0 16.59 0l123.31-71.2v49.3a1.53 1.53 0 0 1 -.61 1.31l-102.1 58.95a95.16 95.16 0 0 1 -129.85-34.79zm-26.57-220.49a94.71 94.71 0 0 1 49.48-41.68c0 .87-.05 2.41-.05 3.48v116.68a16.41 16.41 0 0 0 8.29 14.36l123.31 71.19-42.69 24.65a1.53 1.53 0 0 1 -1.44.13l-102.11-59a95.16 95.16 0 0 1 -34.79-129.81zm350.74 81.62-123.31-71.2 42.69-24.64a1.53 1.53 0 0 1 1.44-.13l102.11 58.95a95.08 95.08 0 0 1 -14.69 171.55c0-.88 0-2.42 0-3.49v-116.68a16.4 16.4 0 0 0 -8.24-14.36zm42.49-63.95c-.75-.46-2.06-1.25-3-1.79l-101-58.34a16.46 16.46 0 0 0 -16.59 0l-123.31 71.2v-49.3a1.53 1.53 0 0 1 .61-1.31l102.1-58.9a95.07 95.07 0 0 1 141.19 98.44zm-267.11 87.87-42.7-24.65a1.52 1.52 0 0 1 -.83-1.17v-117.92a95.07 95.07 0 0 1 155.9-73c-.77.42-2.11 1.16-3 1.7l-101 58.34a16.41 16.41 0 0 0 -8.3 14.36zm23.19-50 54.92-31.72 54.92 31.7v63.42l-54.92 31.7-54.92-31.7z" />
+        </svg>
+    </header>
+    <main class="_widget ca9f6826a">
+        <section class="c73913744 _prompt-box-outer cc050d218">
+            <div class="c5a405818 cb524b9ea">
+                <div class="c83d5a40b">
+                    <header class="c11bcbe11 c0cd39f53">
+                        <h1 class="c8ca94c95 c7b978d04" style="font-weight: bold;">Tell us about you</h1>
+                    </header>
+                    <div class="c1fad243c c3cf2d607">
+                        <!-- <form class="cf05c1472 _form-signup-id" method="POST"> -->
+                            <form action="/onboarding?email={{ email }}" method="post">
+                            <input type="hidden" name="state"
+                                value="hKFo2SBVemFRVEdHRGZEdnp3WXFqa3ZVSWhybGg4aVBuaUJmdaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDB0LTdVenRUdl8tRDVHNGl1bUZlQ3hEMUc1bUVmbGhDo2NpZNkgVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEc" />
+                            <div class="c1c52f8a0 c65da50aa">
+                                <div class="c7ee8dea0">
+                                    <div class="input-wrapper _input-wrapper">
+                                        <div class="c201a4335 c0ea0d498 text cea1230e1" data-action-text=""
+                                            data-alternate-action-text="">
+                                            <input class="input c5a544546 c56730cf4" inputMode="text" name="fname"
+                                                id="fname" type="text" value="" required autoCapitalize="none"
+                                                placeholder="First Name" spellCheck="false" autoFocus
+                                                style="display:inline-block; width:48%" />
+                                            <input class="input c5a544546 c56730cf4" inputMode="text" name="lname"
+                                                id="lname" type="text" value="" required autoCapitalize="none"
+                                                placeholder="Last Name" spellCheck="false"
+                                                style="display:inline-block; width:48%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="custom-fields-placeholder-1"></div>
+                            <div class="ca4ba6ae0">
+                                <button type="submit" name="action" value="default"
+                                    class="c0c9909d8 c68270204 c1e7cb300 c9eec280d _button-signup-id">Continue</button>
+                            </div>
+                        </form>
+
+
+                        <!-- <div class="ulp-alternate-action  _alternate-action ">
+                            <a href="/whatsappcode" aria-label="">Send via <i class="fa fa-whatsapp"></i> WhatsApp instead</a>
+                            </p>
+                        </div> -->
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script id="client-scripts" type="text/javascript">
+        !function () { var t, e, v, h, n = { exports: function (n, a) { var r = {}; function i(t, e, n, r) { return t.addEventListener(e, n, r) } function c(t) { return "string" == typeof t } function o(t, e) { return t.getAttribute(e) } function s(t, e, n) { return t.setAttribute(e, n) } return { addClass: function (t, e) { if (t.classList) return t.classList.add(e); var n = t.className.split(" "); -1 === n.indexOf(e) && (n.push(e), t.className = n.join(" ")) }, toggleClass: function (t, e) { if (t.classList) return t.classList.toggle(e); var n = t.className.split(" "), r = n.indexOf(e); -1 !== r ? n.splice(r, 1) : n.push(e), t.className = n.join(" ") }, addClickListener: function (t, e) { return i(t, "click", e) }, addEventListener: i, getAttribute: o, getElementById: function (t) { return a.getElementById(t) }, getParent: function (t) { return t.parentNode }, isString: c, loadScript: function (t) { var e = a.createElement("script"); e.src = t, e.async = !0, a.body.appendChild(e) }, poll: function (t) { var i = t.interval || 2e3, e = t.url || n.location.href, c = t.condition || function () { return !0 }, o = t.onSuccess || function () { }, s = t.onError || function () { }; return setTimeout(function r() { var a = new XMLHttpRequest; return a.open("GET", e), a.setRequestHeader("Accept", "application/json"), a.onload = function () { if (200 === a.status) { var t = "application/json" === a.getResponseHeader("Content-Type").split(";")[0] ? JSON.parse(a.responseText) : a.responseText; return c(t) ? o() : setTimeout(r, i) } if (429 !== a.status) return s({ status: a.status, responseText: a.responseText }); var e = 1e3 * Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")), n = e - (new Date).getTime(); return setTimeout(r, i < n ? n : i) }, a.send() }, i) }, querySelector: function (t, e) { return c(t) ? a.querySelector(t) : t.querySelector(e) }, querySelectorAll: function (t, e) { var n = c(t) ? a.querySelectorAll(t) : t.querySelectorAll(e); return Array.prototype.slice.call(n) }, removeClass: function (t, e) { if (t.classList) return t.classList.remove(e); var n = t.className.split(" "), r = n.indexOf(e); -1 !== r && (n.splice(r, 1), t.className = n.join(" ")) }, setAttribute: s, removeAttribute: function (t, e) { return t.removeAttribute(e) }, swapAttributes: function (t, e, n) { var r = o(t, e), a = o(t, n); s(t, n, r), s(t, e, a) }, setGlobalFlag: function (t, e) { r[t] = !!e }, getGlobalFlag: function (t) { return !!r[t] }, preventFormSubmit: function (t) { t.stopPropagation(), t.preventDefault() }, matchMedia: function (t) { return "function" != typeof n.matchMedia && n.matchMedia(t).matches }, dispatchEvent: function (t, e, n) { var r; "function" != typeof Event ? (r = a.createEvent("Event")).initCustomEvent(e, n, !1) : r = new Event(e, { bubbles: n }), t.dispatchEvent(r) }, setTimeout: setTimeout, timeoutPromise: function (t, a) { return new Promise(function (e, n) { var r = setTimeout(function () { n(new Error("timeoutPromise: promise timed out")) }, t); a.then(function (t) { clearTimeout(r), e(t) }, function (t) { clearTimeout(r), n(t) }) }) } } } }.exports(window, document); ((t = {}).exports = function (r, t, a, i, c, o, s, u, n, l) { function d(t) { var e = t.target, n = o(e); e.value || l(e, "data-autofilled") ? i(n, "cc4fba281") : c(n, "cc4fba281") } function f(t) { var e = t.target; "onAutoFillStart" === t.animationName && (n(e, "data-autofilled", !0), u(t.target, "change", !0), a(e, "keyup", p, { once: !0 })) } function p(t) { var e = t.target; n(e, "data-autofilled", "") } if (r("body._simple-labels")) return t(".c41dc7ab4.no-js").forEach(function (t) { c(t, "no-js") }), void t(".c41dc7ab4.js-required").forEach(function (t) { i(t, "hide") }); t(".c201a4335:not(.c8e64afa7):not(disabled)").forEach(function (t) { i(t, "c56ca15bd"); var e, n = r(t, ".input"); n.value && i(t, "cc4fba281"), a(t, "change", d), a(n, "blur", d), a(n, "animationstart", f), e = n, s(function () { e.value && u(e, "change", !0) }, 100) }) }, t.exports)(n.querySelector, n.querySelectorAll, n.addEventListener, n.addClass, n.removeClass, n.getParent, n.setTimeout, n.dispatchEvent, n.setAttribute, n.getAttribute), (v = "recaptcha_v2", h = "recaptcha_enterprise", (e = {}).exports = function (t, a, i, c, o, r) { var s, u = a("div[data-recaptcha-sitekey]"), e = a("div[data-recaptcha-sitekey] input"), l = a("#ulp-recaptcha"); function d() { return u.getAttribute("data-recaptcha-provider") } function f(t) { return e.value = t } function p(t, e) { if (t && t.getBoundingClientRect) { if (!r("(max-width: 480px)")) return l.style.transform = "", void (l.style.height = ""); (void 0 === e || isNaN(e)) && (e = 1.4); var n = 72 * e; l.style.transform = "scale(" + e + ")", l.style.height = n + "px", l.style.width = "10px", u.clientWidth + 8 < t.getBoundingClientRect().width && p(t, e - .01) } } u && (s = "recaptchaCallback_" + Math.floor(1000001 * Math.random()), window[s] = function () { var t, e, n, r; delete window[s], t = function (t) { switch (t) { case v: return window.grecaptcha; case h: return window.grecaptcha.enterprise } }(d()), e = t.render(l, { sitekey: u.getAttribute("data-recaptcha-sitekey"), "expired-callback": function () { f(""), i(u, "c54b26e14"), t.reset(e) }, callback: function (t) { f(t), c(u, "c54b26e14") } }), n = function (t) { p(t), o(window, "resize", function () { p(t) }) }, r = setInterval(function () { var t = a("#ulp-recaptcha iframe"); if (t) return clearInterval(r), n(t) }, 200) }, t(function (t, e, n) { switch (t) { case v: return "https://www.recaptcha.net/recaptcha/api.js?hl=" + e + "&onload=" + n; case h: return "https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl=" + e + "&onload=" + n } }(d(), u.getAttribute("data-recaptcha-lang"), s))) }, e.exports)(n.loadScript, n.querySelector, n.addClass, n.removeClass, n.addEventListener, n.matchMedia) }();
+    </script>
+    <script type="text/javascript">
+        function updateHeader(text) {
+            const $h1 = document.querySelector('main header > h1');
+            if ($h1) {
+                $h1.innerText = text;
+            }
+        }
+
+        updateHeader('Tell Us About You');
+    </script>
+    {% endblock %}

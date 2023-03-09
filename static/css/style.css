@@ -1,0 +1,194 @@
+body {
+  background: #ffffff;
+  font-family: ulp-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+}
+.react-scroll-to-bottom--css-wmfwj-79elbk {
+  max-height: 100vh;
+  /* set a maximum height */
+  overflow-y: auto;
+  /* add a vertical scrollbar */
+}
+
+.cf59de101 {
+  background: #ffffff;
+}
+
+.c5e785f29.c444d2b17 {
+  background: #D00E17;
+}
+
+.c5e785f29.c927264cb {
+  background: #0A8852;
+}
+
+.c68270204 {
+  background-color: #10a37f;
+  color: #ffffff;
+}
+
+.c68270204 a,
+.c68270204 a:visited {
+  color: #ffffff;
+}
+
+.cda3c8c7e {
+  background-color: #0A8852;
+}
+
+.c0683acb7 {
+  background-color: #D00E17;
+}
+
+@supports (mask-image: url('/static/img/branding-generic/copy-icon.svg')) {
+  @supports not (-ms-ime-align: auto) {
+    .c201a4335.c54b26e14::before {
+      background-color: #D00E17;
+    }
+  }
+}
+
+.input.cd118ec92 {
+  border-color: #D00E17;
+}
+
+.error-cloud {
+  background-color: #D00E17;
+}
+
+.error-fatal {
+  background-color: #D00E17;
+}
+
+.error-local {
+  background-color: #D00E17;
+}
+
+#alert-trigger {
+  background-color: #D00E17;
+}
+
+/* By default, hide features for javascript-disabled browsing */
+/* We use !important to override any css with higher specificity */
+/* It is also overriden by the styles in <noscript> in the header file */
+.no-js {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* We use !important to override the default for js enabled */
+/* If the display should be other than block, it should be defined specifically here */
+.js-required {
+  display: none !important;
+}
+
+.no-js {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: auto;
+  position: static;
+  white-space: normal;
+  width: var(--prompt-width);
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegularItalic.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegularItalic.woff) format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBoldItalic.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBoldItalic.woff) format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  --font-family: "ColfaxAI", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  --primary-color: #10a37f;
+  --primary-color-no-override: #10a37f;
+  --action-primary-color: #10a37f;
+  --link-color: #10a37f;
+  --input-box-shadow-depth: 1px;
+  --page-background-color: #ffffff;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--page-background-color);
+}
+
+/* Show custom openai logo */
+.oai-header {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oai-header svg {
+  width: 32px;
+  height: 32px;
+  fill: #202123;
+}
+
+main header>img:first-of-type {
+  display: none;
+}
+
+main>section,
+main>section>div:first-child {
+  box-shadow: none;
+}
+
+main header>h1 {
+  font-weight: bold !important;
+  font-size: 32px !important;
+}
+
+main a {
+  font-weight: normal !important;
+}
+
+.ulp-alternate-action {
+  text-align: center;
+}
+
+button[type="submit"] {
+  font-family: var(--font-family);
+}
+
+
+
+
+main header>h1 {
+  margin-bottom: 0 !important;
+}
