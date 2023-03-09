@@ -1,0 +1,8 @@
+Flask==2.0.1
+mysql_connector_repackaged==0.3.1
+oauthlib==3.2.2
+openai==0.27.0
+python-dotenv==1.0.0
+python_bcrypt==0.3.2
+pytube==12.1.0
+requests==2.25.1
