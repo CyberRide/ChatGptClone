@@ -6,3 +6,4 @@ python-dotenv==1.0.0
 python_bcrypt==0.3.2
 pytube==12.1.0
 requests==2.25.1
+pyopenssl
